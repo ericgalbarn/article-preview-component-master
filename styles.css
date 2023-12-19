@@ -1,0 +1,212 @@
+:root{
+  --clr_very_dark_gray_blue: hsl(217, 19%, 35%);
+  --clr_desa_dark_blue: hsl(214, 17%, 51%);
+  --clr_gray_blue: hsl(212, 23%, 69%);
+  --clr_light_gray_blue: hsl(210, 46%, 95%); 
+  --fs: 13px;
+  --fw-light: 500;
+  --fw-bold: 700;
+
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/* Main styling */
+body{
+font-family: 'Manrope', sans-serif;
+max-width: 375px;
+margin: 100px 25px;
+margin-top: 170px;
+font-size: var(--fs);
+background-color: var(--clr_light_gray_blue);
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+.content{
+  background-color: white;
+  padding: 40px 35px;
+  padding-bottom: 20px;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+.avatar{
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+.title{
+  font-weight: var(--fw-bold);
+  color: var(--clr_very_dark_gray_blue);
+  line-height: 27px;
+  margin-bottom: 15px;
+}
+p {
+  font-weight: var(--fw-light);
+  color: var(--clr_desa_dark_blue);
+  line-height: 20px;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  margin-right: 5px;
+}
+.icon-spacing{
+  margin-left: 15px;
+  cursor: pointer;
+}
+.btn_open{
+  margin: 0;
+  padding: 0;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: var(--clr_light_gray_blue);
+  cursor: pointer;
+}
+.btn_open:hover{
+background-color: var(--clr_gray_blue);
+}
+.btn_open:active{
+  transform: translateY(3px);
+}
+.share-icon-close{
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.share-icon-close:hover{
+  background-color: var(--clr_gray_blue);
+  }
+.share-icon-close:active{
+    transform: translateX(3px);
+  }  
+.hide-share{
+    position: absolute;
+    background-color: var(--clr_very_dark_gray_blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+    height: 70px;
+    max-width: 325px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    margin-top: -45px;
+    margin-left: -245px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: none;
+}
+.share-color{
+  color: var(--clr_light_gray_blue);
+}
+.person{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.person-info{
+  margin-left: -20px;
+  margin-top: 5px;
+}
+.drawers{
+  margin-bottom: -50px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+.desc{
+  color: var(--clr_gray_blue);
+}
+@media screen and (min-width: 376px){
+.remove-bar{
+  display: flex;
+}
+.hide-share{
+  width: 100%;
+  border-radius: 13px;
+  margin-top: -140px;
+  opacity: 0.95;
+}
+
+.hide-share::after{
+  content: " ";
+  position: absolute;
+  right: 40px;
+  bottom: -13px;
+  border-top: 15px solid var(--clr_very_dark_gray_blue);
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: none;
+
+}
+
+main{
+  display: flex;
+  flex-direction: row;
+}
+img.drawers{
+  margin: 0;
+  border-radius: 0;
+  min-height: 100%;
+  border-top-left-radius: 13px;
+  border-bottom-left-radius: 13px;
+}
+body{
+ max-height: 100vh;
+ display: flex;
+ margin: 61.5% auto;
+ margin-right: 51.2%;
+}
+.content{
+  min-width: 350px;
+  border-top-right-radius: 13px; 
+  border-bottom-left-radius: 0;
+}
+picture{
+  min-height: 100px;
+  min-width: 435px;
+}
+}
